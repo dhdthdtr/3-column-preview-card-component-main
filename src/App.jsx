@@ -33,7 +33,7 @@ function App() {
     ]
 
     let items = datas.map((data, index) => (
-        <div key={index} className={data.bgcolor + (index === 0 ? ' rounded-tl-m10 rounded-bl-m10 mobile:rounded-bl-none mobile:rounded-tr-m10' : (index === 2 ? " rounded-tr-m10 rounded-br-m10 mobile:rounded-tr-none mobile:rounded-bl-m10" : "")) + " w-4/12 mobile:w-full p-40px"}>
+        <div key={index} id={"card-" + index} className={data.bgcolor + (index === 0 ? ' rounded-tl-m10 rounded-bl-m10 mobile:rounded-bl-none mobile:rounded-tr-m10' : (index === 2 ? " rounded-tr-m10 rounded-br-m10 mobile:rounded-tr-none mobile:rounded-bl-m10" : "")) + " w-4/12 mobile:w-full p-40px"}>
             <div className="w-full h-auto mb-30px">
                 <img src={data.img} alt="" />
             </div>
@@ -53,7 +53,7 @@ function App() {
                 mobile:mb-30px 
                 leading-6
             ">{data.description}</p>
-            <button className={data.textcolor+" font-deca bg-white hover:"+data.btncolor+" border-none text-black text-center w-70pc py-2.5 px-4 rounded-full duration-300 ease-linear delay-0 mobile:font-bold"}>Learn more</button>
+            <button className={`hover:${data.btncolor} hover:border-white ${data.textcolor} font-deca bg-white border-none text-black text-center w-70pc py-2.5 px-4 rounded-full duration-300 ease-linear delay-0 mobile:font-bold`}>Learn more</button>
         </div>
     ))
 
